@@ -1,0 +1,43 @@
+<div class="template-wrapper">
+  <div class="container">
+    <div class="containerRaysWrapper">
+      <div class="containerRays">
+        <div
+          *ngFor="let ray of rays; let i = index"
+          class="ray"
+          [style.transform]="'rotate(' + getAngle(i) + 'deg) translate(' + radius + 'px)'"
+          style="position: absolute; transform-origin: 0 0;"
+        ></div>
+      </div>
+    </div>
+    <div class="sun"></div>
+    <div class="iconContainer">
+      <img src="/assets/rocket.svg" alt="Rocket Icon" class="icon" />
+    </div>
+    <div>
+      <img src="assets/braces-asterisk.svg" alt="Brackets" class="iconElement" />
+      <img src="assets/database-fill.svg" alt="Database" class="iconElement" />
+      <img src="assets/palette-fill.svg" alt="Paint" class="iconElement" />
+      <img src="assets/person-vcard-fill.svg" alt="Person" class="iconElement" />
+    </div>
+    <svg class="containerLines" height="100%" width="100%">
+      <line x1="150" y1="120" x2="300" y2="120" stroke="#1976d2" />
+      <line x1="300" y1="120" x2="300" y2="200" stroke="#1976d2" />
+      <line x1="300" y1="200" x2="500" y2="200" stroke="#1976d2" />
+      <line x1="500" y1="200" x2="700" y2="200" stroke="#1976d2" />
+      <line x1="700" y1="200" x2="700" y2="120" stroke="#1976d2" />
+      <line x1="700" y1="120" x2="800" y2="120" stroke="#1976d2" />
+      <line x1="300" y1="280" x2="500" y2="280" stroke="#1976d2" />
+      <line x1="300" y1="280" x2="300" y2="360" stroke="#1976d2" />
+      <line x1="300" y1="360" x2="140" y2="360" stroke="#1976d2" />
+      <line x1="500" y1="280" x2="700" y2="280" stroke="#1976d2" />
+      <line x1="700" y1="280" x2="700" y2="360" stroke="#1976d2" />
+      <line x1="700" y1="360" x2="820" y2="360" stroke="#1976d2" />
+    </svg>
+  </div>
+
+  <div style="margin-top: -64px; display: flex; flex-direction: column; gap: 16px; align-items: center;">
+    <h1 style="text-align: center;">Fireploy App</h1>
+    <router-outlet></router-outlet>
+  </div>
+</div>
